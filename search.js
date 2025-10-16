@@ -1503,7 +1503,6 @@ const handleSearchModifer = () => {
 }
 handleSearchModifer();
 
-
 const handleMapSearchPage = () => {
   const mapOverlay = document.querySelector('.map-overlay-background');
   const closeMapBtn = document.querySelector('.close-map');
@@ -1515,6 +1514,7 @@ const handleMapSearchPage = () => {
   });
 };
 
+// Initialize
 handleMapSearchPage();
 
 
@@ -1528,18 +1528,13 @@ const initDateModifier = () => {
   for (const btn of openBtns) {
     btn.addEventListener('click', () => {
       overlay.style.display = 'flex';
-
-      if (window.innerWidth > 500) {
-        document.body.style.overflowY = 'hidden'; // disable scroll for large screens
-      } else {
-        document.body.style.overflowY = ''; // allow scroll for small screens
-      }
+      document.body.style.overflowY = 'hidden'; // disable scroll
     });
   }
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
-    document.body.style.overflowY = ''; // always restore scroll
+    document.body.style.overflowY = ''; // restore scroll
   });
 };
 
