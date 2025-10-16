@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+     <!-- header  -->
+    <div class="header-bar">
+    <h1 class="logo-header">LOGO</h1>
+    <div>
+        <button class="btn-header-bar">Booking management</button>
+        <button class="btn-header-bar">Log in</button>
+    </div>
+    </div>  
+    <div class="line-divider"></div>
+
+    <!-- start of the second background -->
+     <div class="second-background">
+        <div class="content-container">
+            <!-- left coulmn -->
+
+            <!-- filters coulmn -->
+             <div class="filters-columns">
+                <div class="filter-columns-boxes" id="search-modifier">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                    <span class="city-hotel-name">Dubai, United Arab Emirates</span>
+    
+                    <div class="dates-change">
+                        <span>25 Jul 2025</span>
+                        <span class="date-line-divider"></span>
+                        <span>29 Jul 2025</span>
+                    </div>
+                    <span class="guests-number">1 room for 2 guests</span>
+                    <div class="guest-citizenship-box">
+                        <h6>citizenship:</h6>
+                        <span id="guest-citizenship">Jordan</span>
+                    </div>
+                </div>
+                <div class="filter-columns-boxes sort-by-box">
+                    <h3 class="boxes-title">Sort by</h3>
+                    <input type="text" class="filters-input sort-by-input" value="popularity" readonly autocomplete="off">
+                    <div class="sort-by-options-continer">
+                        <ul class="sort-by-options">
+                            <li>Price (Low to high)</li>
+                            <li>Price (high to Low)</li>
+                            <li>popularity  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-columns-boxes hotel-name-box">
+                    <h3 class="boxes-title">Hotel name</h3>
+                    <input type="text" class="filters-input hotel-input" placeholder="For example, Rixos" autocomplete="off">
+                    <div class="hotel-options-continer">
+                        <ul class="hotel-options">
+                            <p>Hotel not found</p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-columns-boxes" id="star-rating">
+                    <h3 class="boxes-title">Star Rating</h3>
+                    <ul class="lists-item">
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>5 stars</span>
+                        </li>
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>4 stars</span>
+                        </li>  
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>3 stars</span>
+                        </li>                   
+                    </ul>
+                </div>
+                <div class="filter-columns-boxes" id="meals">
+                    <h3 class="boxes-title">Meals</h3>
+                    <ul class="lists-item">
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>Breakfast included</span>
+                        </li>
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>Breakfast + dinner included</span>
+                        </li>  
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>All-inclusive</span>
+                        </li>                   
+                    </ul>
+                </div>
+                <div class="filter-columns-boxes" id="cancellation-policies">
+                   <h3 class="boxes-title">Cancellation Policies</h3>
+                   <ul class="lists-item">
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>Free Cancellation</span>
+                        </li>           
+                    </ul> 
+                </div>
+
+             </div>
+
+            <!-- right coulmn -->
+
+             <!-- search result  -->
+              <div class="search-result">
+                <div class="tablet-box" >
+
+                    <div class="filter-columns-boxes" id="mobile-search-modifier">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                        <span class="city-hotel-name">Dubai, United Arab Emirates</span>
+                    <div class="mobile-dates-guest">
+                            <div class="dates-change">
+                                <span>25 Jul 2025</span>
+                                <span class="date-line-divider"></span>
+                                <span>29 Jul 2025</span>
+                            </div>
+                            <span class="guests-number">1 room for 2 guests</span>
+                            <div class="guest-citizenship-box">
+                                <h6>citizenship:</h6>
+                                <span id="guest-citizenship">Jordan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-box">
+                        <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z"/></svg> Filters</button>
+                    </div>
+                </div>
+
+
+                <!-- search number -->
+                 <div class="search-info">
+                    <h3>Dubai: <span id="number-of-search">975</span> options available</h3>
+                </div>
+
+                <!-- applied filters -->
+                 <div class="applied-filters-container">
+                    <h3 class="applied-filters-title">Applied Filters:</h3>
+                    <div class="applied-filters-text-box">
+                    </div>
+                 </div>
+
+
+
+                 <!-- hotel content -->
+                 <div class="hotel-card">
+                    <div class="hotel-img">
+                        <img src="test.jpeg" alt="">
+                    </div>
+
+                    <div class="hotel-info">
+                        <span class="hotel-name">Paramount Hotel Dubai</span>
+                        <span class="hotel-star-rating"><svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><defs><path id="star" d="M9.07668 2.21993C9.41827 1.39864 10.5817 1.39864 10.9233 2.21993L12.4105 5.79546C12.5545 6.1417 12.8801 6.37827 13.2539 6.40823L17.114 6.7177C18.0006 6.78878 18.3601 7.89529 17.6846 8.47396L14.7436 10.9932C14.4588 11.2372 14.3345 11.6199 14.4215 11.9847L15.32 15.7515C15.5264 16.6167 14.5851 17.3006 13.826 16.8369L10.5213 14.8184C10.2012 14.6229 9.79876 14.6229 9.47875 14.8184L6.17397 16.8369C5.41487 17.3006 4.47362 16.6167 4.68001 15.7515L5.57852 11.9847C5.66553 11.6199 5.54116 11.2372 5.25637 10.9932L2.31539 8.47396C1.63985 7.89529 1.99938 6.78878 2.88603 6.7177L6.74612 6.40823C7.11991 6.37827 7.44552 6.1417 7.58953 5.79546L9.07668 2.21993Z"/></defs><use href="#star" x="0" y="0" fill="#FFBD00"/><use href="#star" x="20" y="0" fill="#FFBD00"/><use href="#star" x="40" y="0" fill="#FFBD00"/><use href="#star" x="60" y="0" fill="#FFBD00"/><use href="#star" x="80" y="0" fill="#FFBD00"/></svg></span>
+                        <div class="location">
+                            <span class="location-text">57PR+GR8 - Business Bay, Dubai</span>
+                            <span class="location-map-view"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>View on map</span>
+                        </div>
+
+                        <div class="booking-info">
+                            <div class="room-specs">
+                                <h3 class="medium-font-booking-info room-specs-title">Scene Double room</h3>
+                                <h6 class="small-font-booking-info room-specs-sub-title">full double bed</h6>
+                            </div>
+                            <div class="meals-cancellation">
+                                <div class="meals-top">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>
+                                    <h3 class="medium-font-booking-info meals-title">No meals</h3>
+                                </div>
+                                <div class="cancellation-bottom">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M662-60 520-202l56-56 85 85 170-170 56 57L662-60ZM296-280l-56-56 64-64-64-64 56-56 64 64 64-64 56 56-64 64 64 64-56 56-64-64-64 64ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v254l-80 81v-175H200v400h250l79 80H200Zm0-560h560v-80H200v80Zm0 0v-80 80Z"/></svg>
+                                    <h6 class="medium-font-booking-info cancellation-title">Free cancellation</h6>
+                                </div>
+                            </div>
+                            <div class="price-details">
+                                <h3 class="price-details-title">$ <span>222</span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> </h3>
+                                <div class="continer-price-info">
+                                    <!-- info hover -->
+                                    <div class="price-info-total">
+                                        <h3>Total Price (pay now)</h3>
+                                        <h6>$ <span>700</span></h6>
+                                    </div>
+                                    <div class="info-line"></div>
+                                    <div class="price-not-included">
+                                        <h3>Not included in the price  <span>( pay at the hotel )</span></h3>
+                                        <div class="city-tax">
+                                            <h6>City Tax</h6>
+                                            <div class="city-tax-currency">
+                                                <span id="city-tax-price">100</span>
+                                                <span id="local-currency">AED</span>
+                                                <span>=</span>
+                                                <h6>(<span id="city-tax-usd">20</span></h6>
+                                                <span>USD)</span>
+                                            </div>  
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h6 class="small-font-booking-info price-details-sub-title">for 4 nights for 15 guests</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-info-btn-box">
+                            <button class="show-all-rooms-btn">Show all rooms</button>
+                        </div>
+                    </div>
+
+                    
+
+                 </div>
+
+                 <div class="hotel-card">
+                    <div class="hotel-img">
+                        <img src="test.jpeg" alt="">
+                    </div>
+
+                    <div class="hotel-info">
+                        <span class="hotel-name">Paramount Hotel Dubai</span>
+                        <span class="hotel-star-rating"><svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><defs><path id="star" d="M9.07668 2.21993C9.41827 1.39864 10.5817 1.39864 10.9233 2.21993L12.4105 5.79546C12.5545 6.1417 12.8801 6.37827 13.2539 6.40823L17.114 6.7177C18.0006 6.78878 18.3601 7.89529 17.6846 8.47396L14.7436 10.9932C14.4588 11.2372 14.3345 11.6199 14.4215 11.9847L15.32 15.7515C15.5264 16.6167 14.5851 17.3006 13.826 16.8369L10.5213 14.8184C10.2012 14.6229 9.79876 14.6229 9.47875 14.8184L6.17397 16.8369C5.41487 17.3006 4.47362 16.6167 4.68001 15.7515L5.57852 11.9847C5.66553 11.6199 5.54116 11.2372 5.25637 10.9932L2.31539 8.47396C1.63985 7.89529 1.99938 6.78878 2.88603 6.7177L6.74612 6.40823C7.11991 6.37827 7.44552 6.1417 7.58953 5.79546L9.07668 2.21993Z"/></defs><use href="#star" x="0" y="0" fill="#FFBD00"/><use href="#star" x="20" y="0" fill="#FFBD00"/><use href="#star" x="40" y="0" fill="#FFBD00"/><use href="#star" x="60" y="0" fill="#FFBD00"/><use href="#star" x="80" y="0" fill="#FFBD00"/></svg></span>
+                        <div class="location">
+                            <span class="location-text">57PR+GR8 - Business Bay, Dubai</span>
+                            <span class="location-map-view"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>View on map</span>
+                        </div>
+
+                        <div class="booking-info">
+                            <div class="room-specs">
+                                <h3 class="medium-font-booking-info room-specs-title">Scene Double room</h3>
+                                <h6 class="small-font-booking-info room-specs-sub-title">full double bed</h6>
+                            </div>
+                            <div class="meals-cancellation">
+                                <div class="meals-top">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>
+                                    <h3 class="medium-font-booking-info meals-title">No meals</h3>
+                                </div>
+                                <div class="cancellation-bottom">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M662-60 520-202l56-56 85 85 170-170 56 57L662-60ZM296-280l-56-56 64-64-64-64 56-56 64 64 64-64 56 56-64 64 64 64-56 56-64-64-64 64ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v254l-80 81v-175H200v400h250l79 80H200Zm0-560h560v-80H200v80Zm0 0v-80 80Z"/></svg>
+                                    <h6 class="medium-font-booking-info cancellation-title">Free cancellation</h6>
+                                </div>
+                            </div>
+                            <div class="price-details">
+                                <h3 class="price-details-title">$ <span>222</span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> </h3>
+                                <h6 class="small-font-booking-info price-details-sub-title">for 4 nights for 2 guests</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-info-btn-box">
+                            <button class="show-all-rooms-btn">Show all rooms</button>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="hotel-card">
+                    <div class="hotel-img">
+                        <img src="test.jpeg" alt="">
+                    </div>
+
+                    <div class="hotel-info">
+                        <span class="hotel-name">Paramount Hotel Dubai</span>
+                        <span class="hotel-star-rating"><svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><defs><path id="star" d="M9.07668 2.21993C9.41827 1.39864 10.5817 1.39864 10.9233 2.21993L12.4105 5.79546C12.5545 6.1417 12.8801 6.37827 13.2539 6.40823L17.114 6.7177C18.0006 6.78878 18.3601 7.89529 17.6846 8.47396L14.7436 10.9932C14.4588 11.2372 14.3345 11.6199 14.4215 11.9847L15.32 15.7515C15.5264 16.6167 14.5851 17.3006 13.826 16.8369L10.5213 14.8184C10.2012 14.6229 9.79876 14.6229 9.47875 14.8184L6.17397 16.8369C5.41487 17.3006 4.47362 16.6167 4.68001 15.7515L5.57852 11.9847C5.66553 11.6199 5.54116 11.2372 5.25637 10.9932L2.31539 8.47396C1.63985 7.89529 1.99938 6.78878 2.88603 6.7177L6.74612 6.40823C7.11991 6.37827 7.44552 6.1417 7.58953 5.79546L9.07668 2.21993Z"/></defs><use href="#star" x="0" y="0" fill="#FFBD00"/><use href="#star" x="20" y="0" fill="#FFBD00"/><use href="#star" x="40" y="0" fill="#FFBD00"/><use href="#star" x="60" y="0" fill="#FFBD00"/><use href="#star" x="80" y="0" fill="#FFBD00"/></svg></span>
+                        <div class="location">
+                            <span class="location-text">57PR+GR8 - Business Bay, Dubai</span>
+                            <span class="location-map-view"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>View on map</span>
+                        </div>
+
+                        <div class="booking-info">
+                            <div class="room-specs">
+                                <h3 class="medium-font-booking-info room-specs-title">Scene Double room</h3>
+                                <h6 class="small-font-booking-info room-specs-sub-title">full double bed</h6>
+                            </div>
+                            <div class="meals-cancellation">
+                                <div class="meals-top">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>
+                                    <h3 class="medium-font-booking-info meals-title">No meals</h3>
+                                </div>
+                                <div class="cancellation-bottom">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M662-60 520-202l56-56 85 85 170-170 56 57L662-60ZM296-280l-56-56 64-64-64-64 56-56 64 64 64-64 56 56-64 64 64 64-56 56-64-64-64 64ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v254l-80 81v-175H200v400h250l79 80H200Zm0-560h560v-80H200v80Zm0 0v-80 80Z"/></svg>
+                                    <h6 class="medium-font-booking-info cancellation-title">Free cancellation</h6>
+                                </div>
+                            </div>
+                            <div class="price-details">
+                                <h3 class="price-details-title">$ <span>222</span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> </h3>
+                                <h6 class="small-font-booking-info price-details-sub-title">for 4 nights for 2 guests</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-info-btn-box">
+                            <button class="show-all-rooms-btn">Show all rooms</button>
+                        </div>
+                    </div>
+
+                    
+
+                 </div>
+
+                 <div class="hotel-card">
+                    <div class="hotel-img">
+                        <img src="test.jpeg" alt="">
+                    </div>
+
+                    <div class="hotel-info">
+                        <span class="hotel-name">Paramount Hotel Dubai</span>
+                        <span class="hotel-star-rating"><svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><defs><path id="star" d="M9.07668 2.21993C9.41827 1.39864 10.5817 1.39864 10.9233 2.21993L12.4105 5.79546C12.5545 6.1417 12.8801 6.37827 13.2539 6.40823L17.114 6.7177C18.0006 6.78878 18.3601 7.89529 17.6846 8.47396L14.7436 10.9932C14.4588 11.2372 14.3345 11.6199 14.4215 11.9847L15.32 15.7515C15.5264 16.6167 14.5851 17.3006 13.826 16.8369L10.5213 14.8184C10.2012 14.6229 9.79876 14.6229 9.47875 14.8184L6.17397 16.8369C5.41487 17.3006 4.47362 16.6167 4.68001 15.7515L5.57852 11.9847C5.66553 11.6199 5.54116 11.2372 5.25637 10.9932L2.31539 8.47396C1.63985 7.89529 1.99938 6.78878 2.88603 6.7177L6.74612 6.40823C7.11991 6.37827 7.44552 6.1417 7.58953 5.79546L9.07668 2.21993Z"/></defs><use href="#star" x="0" y="0" fill="#FFBD00"/><use href="#star" x="20" y="0" fill="#FFBD00"/><use href="#star" x="40" y="0" fill="#FFBD00"/><use href="#star" x="60" y="0" fill="#FFBD00"/><use href="#star" x="80" y="0" fill="#FFBD00"/></svg></span>
+                        <div class="location">
+                            <span class="location-text">57PR+GR8 - Business Bay, Dubai</span>
+                            <span class="location-map-view"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>View on map</span>
+                        </div>
+
+                        <div class="booking-info">
+                            <div class="room-specs">
+                                <h3 class="medium-font-booking-info room-specs-title">Scene Double room</h3>
+                                <h6 class="small-font-booking-info room-specs-sub-title">full double bed</h6>
+                            </div>
+                            <div class="meals-cancellation">
+                                <div class="meals-top">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>
+                                    <h3 class="medium-font-booking-info meals-title">No meals</h3>
+                                </div>
+                                <div class="cancellation-bottom">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M662-60 520-202l56-56 85 85 170-170 56 57L662-60ZM296-280l-56-56 64-64-64-64 56-56 64 64 64-64 56 56-64 64 64 64-56 56-64-64-64 64ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v254l-80 81v-175H200v400h250l79 80H200Zm0-560h560v-80H200v80Zm0 0v-80 80Z"/></svg>
+                                    <h6 class="medium-font-booking-info cancellation-title">Free cancellation</h6>
+                                </div>
+                            </div>
+                            <div class="price-details">
+                                <h3 class="price-details-title">$ <span>222</span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> </h3>
+                                <h6 class="small-font-booking-info price-details-sub-title">for 4 nights for 2 guests</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-info-btn-box">
+                            <button class="show-all-rooms-btn">Show all rooms</button>
+                        </div>
+                    </div>
+
+                    
+
+                 </div>
+
+                 <div class="hotel-card">
+                    <div class="hotel-img">
+                        <img src="test.jpeg" alt="">
+                    </div>
+
+                    <div class="hotel-info">
+                        <span class="hotel-name">Paramount Hotel Dubai</span>
+                        <span class="hotel-star-rating"><svg width="100" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><defs><path id="star" d="M9.07668 2.21993C9.41827 1.39864 10.5817 1.39864 10.9233 2.21993L12.4105 5.79546C12.5545 6.1417 12.8801 6.37827 13.2539 6.40823L17.114 6.7177C18.0006 6.78878 18.3601 7.89529 17.6846 8.47396L14.7436 10.9932C14.4588 11.2372 14.3345 11.6199 14.4215 11.9847L15.32 15.7515C15.5264 16.6167 14.5851 17.3006 13.826 16.8369L10.5213 14.8184C10.2012 14.6229 9.79876 14.6229 9.47875 14.8184L6.17397 16.8369C5.41487 17.3006 4.47362 16.6167 4.68001 15.7515L5.57852 11.9847C5.66553 11.6199 5.54116 11.2372 5.25637 10.9932L2.31539 8.47396C1.63985 7.89529 1.99938 6.78878 2.88603 6.7177L6.74612 6.40823C7.11991 6.37827 7.44552 6.1417 7.58953 5.79546L9.07668 2.21993Z"/></defs><use href="#star" x="0" y="0" fill="#FFBD00"/><use href="#star" x="20" y="0" fill="#FFBD00"/><use href="#star" x="40" y="0" fill="#FFBD00"/><use href="#star" x="60" y="0" fill="#FFBD00"/><use href="#star" x="80" y="0" fill="#FFBD00"/></svg></span>
+                        <div class="location">
+                            <span class="location-text">57PR+GR8 - Business Bay, Dubai</span>
+                            <span class="location-map-view"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>View on map</span>
+                        </div>
+
+                        <div class="booking-info">
+                            <div class="room-specs">
+                                <h3 class="medium-font-booking-info room-specs-title">Scene Double room</h3>
+                                <h6 class="small-font-booking-info room-specs-sub-title">full double bed</h6>
+                            </div>
+                            <div class="meals-cancellation">
+                                <div class="meals-top">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg>
+                                    <h3 class="medium-font-booking-info meals-title">No meals</h3>
+                                </div>
+                                <div class="cancellation-bottom">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"><path d="M662-60 520-202l56-56 85 85 170-170 56 57L662-60ZM296-280l-56-56 64-64-64-64 56-56 64 64 64-64 56 56-64 64 64 64-56 56-64-64-64 64ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v254l-80 81v-175H200v400h250l79 80H200Zm0-560h560v-80H200v80Zm0 0v-80 80Z"/></svg>
+                                    <h6 class="medium-font-booking-info cancellation-title">Free cancellation</h6>
+                                </div>
+                            </div>
+                            <div class="price-details">
+                                <h3 class="price-details-title">$ <span>222</span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> </h3>
+                                <h6 class="small-font-booking-info price-details-sub-title">for 4 nights for 2 guests</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-info-btn-box">
+                            <button class="show-all-rooms-btn">Show all rooms</button>
+                        </div>
+                    </div>
+
+                    
+
+                 </div>
+
+
+        </div>
+     </div>
+
+        <div class="filter-container" hidden>
+            <div class="controles">
+                <div class="controls-left">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224  224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></span>
+                    <h6>Filters</h6>
+                </div>
+                <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></span>
+
+            </div>
+                <div class="filter-columns-boxes sort-by-box">
+                    <h3 class="boxes-title">Sort by</h3>
+                    <input type="text" class="filters-input sort-by-input" value="popularity" readonly autocomplete="off">
+                    <div class="sort-by-options-continer">
+                        <ul class="sort-by-options">
+                            <li>Price (Low to high)</li>
+                            <li>Price (high to Low)</li>
+                            <li>popularity  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-columns-boxes hotel-name-box">
+                    <h3 class="boxes-title">Hotel name</h3>
+                    <input type="text" class="filters-input hotel-input" placeholder="For example, Rixos" autocomplete="off">
+                    <div class="hotel-options-continer">
+                        <ul class="hotel-options">
+                            <p>Hotel not found</p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-columns-boxes" id="star-rating">
+                    <h3 class="boxes-title">Star Rating</h3>
+                    <ul class="lists-item">
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>5 stars</span>
+                        </li>
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>4 stars</span>
+                        </li>  
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>3 stars</span>
+                        </li>                   
+                    </ul>
+                </div>
+                <div class="filter-columns-boxes" id="meals">
+                    <h3 class="boxes-title">Meals</h3>
+                    <ul class="lists-item">
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>Breakfast included</span>
+                        </li>
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>Breakfast + dinner included</span>
+                        </li>  
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>All-inclusive</span>
+                        </li>                   
+                    </ul>
+                </div>
+                <div class="filter-columns-boxes" id="cancellation-policies">
+                <h3 class="boxes-title">Cancellation Policies</h3>
+                <ul class="lists-item">
+                        <li class="checkbox-item">
+                            <input class="checkbox-styling" type="checkbox">
+                            <span>Free Cancellation</span>
+                        </li>           
+                    </ul> 
+                </div>
+
+                    <button class="filters-apply-btn">Apply</button>
+            </div> 
+    
+        </div>
+
+        <!-- start of date modifier -->
+        <div class="overlay-background">
+            <div class="date-modifier-container">
+                <svg class="close-date-modifier" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <h3>Search Modifier</h3>
+                <div class="search-boxes-container">
+
+                    <div class="field-box destination">
+                        <h6 class="description">Destination</h6>
+                        <h6 class="placeholder">City or hotel</h6>
+                        <input type="text" class="search-input-field" id="dest-input" autocomplete="off">
+                        <div class="destnation-conatiner">
+                            <div class="destnation-region-box">
+                                <h6 class="region-title">City</h6>
+                                <div class="dest-list"></div>
+                            </div>
+
+                            <div class="destnation-region-box">
+                                <h6 class="hotels-title">Hotels</h6>
+                                <div class="dest-list"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-box datepicker">
+                        <div class="description-datepicker">
+                            <h6 class="label-check-in">Check-in</h6>
+                            <h6 class="num-night"><span id="num_of_night">9</span>N</h6>
+                            <h6 class="label-check-out">Check-out</h6>
+                        </div>
+                        <div class="user-date">
+                            <h6 class="Check-in" id="Check-in">Wed, Sep 17</h6>
+                            <div class="date-divider"></div>
+                            <h6 class="Check-out" id="Check-out">Wed, Sep 19</h6>
+                        </div>
+                        <input type="text" id="datepicker-input" class="search-input-field" readonly>
+                        <div class="calendar-container" hidden>
+                            <div class="left-side">
+                                <div class="controls">
+                                    <button class="prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                                    </button>
+                                    <strong class="label">Month YYYY</strong>
+                                </div>
+                                <div class="days">
+                                    <span>S</span>
+                                    <span>M</span>
+                                    <span>T</span>
+                                    <span>W</span>
+                                    <span>T</span>
+                                    <span>F</span>
+                                    <span>S</span>
+                                </div>
+                                <div class="dates"></div>
+                            </div>
+
+                            <div class="right-side">
+                                <div class="controls">
+                                    <button class="next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                                    </button>
+                                    <strong class="label">Month YYYY</strong>
+                                </div>
+                                <div class="days">
+                                    <span>S</span>
+                                    <span>M</span>
+                                    <span>T</span>
+                                    <span>W</span>
+                                    <span>T</span>
+                                    <span>F</span>
+                                    <span>S</span>
+                                </div>
+                                <div class="dates"> </div>
+                            </div>
+                            <div class="action-menu">
+                                <span class="selection">MM/DD/YYYY - MM/DD/YYYY</span>
+                                <p hidden>You can't choose a period over 30 days</p>
+                                <button class="apply">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-box room-guests">
+                        <h6 class="description">Rooms & Guests</h6>
+                        <!-- <h6 class="placeholder">1 rooms, 2 guests</h6> -->
+                        <input type="text" class="search-input-field" readonly id="room-guests-input" value="1 rooms, 2 guests"> 
+                        <div class="guest-room-conatiner" hidden>
+                        <div class="room-container">
+
+                            <div class="room-title">
+                                <h1>Room <span>1</span></h1>
+                                <button class="remove-added-room-btn" hidden>remove</button>
+                            </div>
+
+                            <div class="guest-info">
+
+                                <div class="adults-box">
+                                    <h3>Adults</h3>
+                                    <div class="adults-number">
+                                        <button class="decrement"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="current-color"><path d="M200-440v-80h560v80H200Z"/></svg></button>
+                                        <input type="text" class="counter-display" value="2" readonly>
+                                        <button class="increment"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="current-color"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></button>
+                                    </div>
+                                </div>
+
+                                <div class="children-box">
+                                    <h3>Children</h3>
+                                    <div class="children-number">
+                                        <div class="selected-child-age-container">
+                                        </div>
+
+                                    
+                                        <div class="child-select">
+                                            <!-- <input type="text" value="+" readonly class="add-a-child-plus-input"> -->
+                                            <input type="text" value="Add a child" readonly class="add-a-child-defulat-input">
+                                            <div class="years-container" hidden>
+                                                <ul class="years-container-options">
+                                                    <li>0 years old</li>
+                                                    <li>1 years old</li>
+                                                    <li>2 years old</li>
+                                                    <li>3 years old</li>
+                                                    <li>4 years old</li>
+                                                    <li>5 years old</li>
+                                                    <li>6 years old</li>
+                                                    <li>7 years old</li>
+                                                    <li>8 years old</li>
+                                                    <li>9 years old</li>
+                                                    <li>10 years old</li>
+                                                    <li>11 years old</li>
+                                                    <li>12 years old</li>
+                                                    <li>13 years old</li>
+                                                    <li>14 years old</li>
+                                                    <li>15 years old</li>
+                                                    <li>16 years old</li>
+                                                    <li>17 years old</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+
+                    
+
+
+                        
+                        <div class="guest-room-line-divider" hidden></div>
+                        
+
+
+                        <div class="submit-add-room">
+                            <div class="add-room-btn">
+                                <h3><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="current-color"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></span> Add a room</h3>
+                            </div>
+                            
+                            <div class="submit-btn">
+                                <button class="done-btn">Done</button>
+                            </div>
+                        </div>
+
+                        
+                        </div>
+                    </div>
+
+                    <div class="field-box guest-citizenship">
+                        <h6 class="description">Guests' citizenship</h6>
+                        <h6 class="placeholder">Choose your citizenship</h6>
+                        <input type="text" class="search-input-field" id="guest-citizenship-input" autocomplete="off">  
+                        <div class="guest-citizenship-conatiner">
+                            <ul class="options">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="search-btn-box">
+                        <button class="search-btn">Search</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- start of the map  -->
+        <div class="map-overlay-background">
+            <div class="map-continer">
+                <svg class="close-map" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224  224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <div class="embed-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.498071526766!2d55.28944697605414!3d25.186420532135912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69a7ebbb7379%3A0xd603555a5b152d3d!2sParamount%20Hotel%20Dubai!5e0!3m2!1sen!2sae!4v1758447586594!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+   
+    
+    
+    <script src="search.js"></script>
+</body>
+</html>
