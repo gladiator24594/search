@@ -2130,6 +2130,10 @@ button:disabled svg {
         top: 515px;
     }
 
+    .hotel-card{
+        height: auto;
+    }
+
 }
 
 
@@ -2203,9 +2207,7 @@ button:disabled svg {
         transform: translateY(-50%); 
     }
 
-    .hotel-card{
-        height: 390px;
-    }
+
     
 
 }
@@ -2593,9 +2595,6 @@ button:disabled svg {
 
   }
 
-      .hotel-card{
-        height: 385px;
-    }
 }
 
 
