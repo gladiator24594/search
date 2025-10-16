@@ -220,7 +220,6 @@ button:hover {
     display: none;
     z-index: 999;
     position: absolute;
-    max-width: 95%;
 }
 
 .hotel-options-continer :has(.hotel-options p) {
