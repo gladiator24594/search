@@ -1751,6 +1751,14 @@ button:disabled svg {
 
 }
 
+@media(max-width: 1350px){
+        .small-font-booking-info{
+        font-size: 8px;
+    }
+
+}
+
+
 @media (max-width: 1300px) { 
     .city-hotel-name, .dates-change, .guests-number,
     .guest-citizenship-box > h6, #guest-citizenship{
@@ -1799,6 +1807,16 @@ button:disabled svg {
     .applied-filters-title{
         font-size: 16px;
     }
+
+
+    .hotel-card{
+        height: 200px;
+    }
+
+    .hotel-img {
+        height: 200px;
+    }
+
 }
 
 @media (max-width:1060px) {
@@ -2185,6 +2203,9 @@ button:disabled svg {
         transform: translateY(-50%); 
     }
 
+    .hotel-card{
+        height: 390px;
+    }
     
 
 }
@@ -2571,6 +2592,10 @@ button:disabled svg {
     max-height: 350px;              
 
   }
+
+      .hotel-card{
+        height: 385px;
+    }
 }
 
 
