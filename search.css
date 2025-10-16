@@ -2418,7 +2418,7 @@ button:disabled svg {
     position: absolute;
     width: 100% !important;
     max-width: none !important;
-    max-height: 500px;                /* 👈 added */
+    max-height: 400px;                /* 👈 added */
     overflow-y: auto;                 /* enable scroll if content too tall */
     box-sizing: border-box;
     padding: 12px;
@@ -2563,10 +2563,15 @@ button:disabled svg {
     flex-wrap: wrap;
 }
 
-
 }
 
 
+@media (max-width: 380px){
+      .calendar-container:not([hidden]) {
+    max-height: 350px;              
+
+  }
+}
 
 
 
