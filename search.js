@@ -1528,13 +1528,18 @@ const initDateModifier = () => {
   for (const btn of openBtns) {
     btn.addEventListener('click', () => {
       overlay.style.display = 'flex';
-      document.body.style.overflowY = 'hidden'; // disable scroll
+
+      if (window.innerWidth > 500) {
+        document.body.style.overflowY = 'hidden'; // disable scroll for large screens
+      } else {
+        document.body.style.overflowY = ''; // allow scroll for small screens
+      }
     });
   }
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
-    document.body.style.overflowY = ''; // restore scroll
+    document.body.style.overflowY = ''; // always restore scroll
   });
 };
 
